@@ -21,6 +21,8 @@
 		4C2F87C8194B085E00DDD844 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2F87AA194B085E00DDD844 /* UIKit.framework */; };
 		4C2F87D0194B085E00DDD844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C2F87CE194B085E00DDD844 /* InfoPlist.strings */; };
 		4C2F87D2194B085E00DDD844 /* BeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F87D1194B085E00DDD844 /* BeaconTests.m */; };
+		4C2F87DC194B157000DDD844 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2F87DB194B157000DDD844 /* CoreBluetooth.framework */; };
+		4C2F87DE194B158000DDD844 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2F87DD194B158000DDD844 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4C2F87CD194B085E00DDD844 /* BeaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconTests-Info.plist"; sourceTree = "<group>"; };
 		4C2F87CF194B085E00DDD844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C2F87D1194B085E00DDD844 /* BeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconTests.m; sourceTree = "<group>"; };
+		4C2F87DB194B157000DDD844 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		4C2F87DD194B158000DDD844 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2F87DE194B158000DDD844 /* CoreLocation.framework in Frameworks */,
+				4C2F87DC194B157000DDD844 /* CoreBluetooth.framework in Frameworks */,
 				4C2F87A9194B085E00DDD844 /* CoreGraphics.framework in Frameworks */,
 				4C2F87AB194B085E00DDD844 /* UIKit.framework in Frameworks */,
 				4C2F87A7194B085E00DDD844 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,8 @@
 		4C2F87A5194B085E00DDD844 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C2F87DD194B158000DDD844 /* CoreLocation.framework */,
+				4C2F87DB194B157000DDD844 /* CoreBluetooth.framework */,
 				4C2F87A6194B085E00DDD844 /* Foundation.framework */,
 				4C2F87A8194B085E00DDD844 /* CoreGraphics.framework */,
 				4C2F87AA194B085E00DDD844 /* UIKit.framework */,
@@ -199,6 +207,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = knowbody;
 				TargetAttributes = {
+					4C2F87A2194B085E00DDD844 = {
+						DevelopmentTeam = XEF622SC57;
+					};
 					4C2F87C3194B085E00DDD844 = {
 						TestTargetID = 4C2F87A2194B085E00DDD844;
 					};
@@ -376,10 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beacon/Beacon-Prefix.pch";
 				INFOPLIST_FILE = "Beacon/Beacon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +403,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beacon/Beacon-Prefix.pch";
 				INFOPLIST_FILE = "Beacon/Beacon-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
